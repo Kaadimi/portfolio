@@ -20,7 +20,7 @@ function ProjectCard({ project }) {
                         <div id="cardLanguages">{languages.map(language => <span key={language} id="cardLanguage">{language}</span>)}</div>
                         <div id="cardButtons">
                             {url ? <a href={url} target="_blank" className="cardButton" rel="noopener noreferrer" id="urlLink">
-                                <img alt="live project link" src={process.env.PUBLIC_URL + 'work.png'}></img>
+                                <img alt="live project link" src={process.env.PUBLIC_URL + '/work.png'}></img>
                             </a> : null}
                             {type === 'system' ? null : <a href={github} target="_blank" className="cardButton" rel="noopener noreferrer" id="githubLink">
                                 Code
