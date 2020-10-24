@@ -28,7 +28,7 @@ function ProjectCard({ project }) {
                             {type === 'system' ? null : <button onClick={() => setShow(true)} className="cardButton" id="showButton">
                                 Show
                             </button>}
-                            <img alt="project icon" src={img} atl="projectImage" id="projectImage"></img>
+                            <img alt="project icon" src={process.env.PUBLIC_URL + img} atl="projectImage" id="projectImage"></img>
                         </div>
                         <span id="cardDescription">{description}</span>
                 </div>
