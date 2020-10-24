@@ -1,0 +1,50 @@
+#notification {
+    z-index: 5;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #ffffff;
+    font-family: "Poppins", Helvetica, sans-serif;
+    padding: .8em 3.1em;
+    font-size: 1em;
+    background-color: #4cdd27;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px -8px rgba(0,0,0,.22);
+    text-shadow: none;
+    text-decoration: none;
+    animation: notification 1s ease-out;
+}
+
+#errorNotif {
+    z-index: 5;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #ffffff;
+    font-family: "Poppins", Helvetica, sans-serif;
+    padding: .8em 3.1em;
+    font-size: 1em;
+    background-color: rgb(253, 72, 72);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px -8px rgba(0,0,0,.22);
+    text-shadow: none;
+    text-decoration: none;
+    animation: notification 1s ease-out;
+}
+
+@keyframes notification {
+    0% {
+        right: -20px;
+    }
+    40% {
+        right: 30px;
+    }
+    70% {
+        right: 15px;
+    }
+    100% {
+        right: 20px;
+    }
+}

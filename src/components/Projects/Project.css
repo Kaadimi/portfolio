@@ -1,0 +1,46 @@
+#projectsContainer {
+    margin: auto;
+    height: fit-content;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 52px;
+    padding-top: 62px;
+}
+
+#projectPageTitle {
+    text-align: left;
+    margin: auto 0px;
+    height: 70px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#projectPageTitle h1 {
+    font-size: 35.2px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+#projectPageTitle span {
+    color: #929292;
+    margin-left: 30px;
+    margin-top: 0;
+}
+
+#projectsInnerContainer {
+    margin: 4%;
+}
+
+#filterButtons {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#filterButtons button{
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    margin-right: 30px;
+}

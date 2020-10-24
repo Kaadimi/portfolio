@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 20px auto;
+    max-width: 90%;
+    height: 220px;
+    width: 500px;
+    border-radius: 10px;
+    z-index: 1;
+    animation: cardShow 1s linear;
+}
+
+#hoverContent {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hoverContent img {
+    width: 720px;
+    height: 360px;
+    border-radius: 20px;
+}
+
+#closeButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+#projectCard {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+#githubLink {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+#githubLink:hover {
+    background-color: #007ced;
+    color: #ffffff;
+}
+
+
+#showButton {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+#showButton:hover {
+    background-color: #007ced;
+    color: #ffffff;
+}
+
+#projectImage {
+   width: 64px;
+   height: 64px;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   z-index: 2;
+}
+
+#cardContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cardTitle {
+    font-family: 'Roboto Slab', serif;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 0;
+}
+
+#cardSubtitle {
+    font-weight: normal;
+    line-height: 30px;
+    font-size: 11px;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 3px
+}
+
+#cardDescription {
+    margin-top: 20px;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+#cardLanguages {
+    margin-top: 10px;
+    font-size: 10px;
+    font-family: 'Roboto Slab';
+    font-weight: normal;
+}
+
+#cardLanguage {
+    border: 1px solid;
+    border-radius: 10px;
+    margin-right: 5px;
+    padding: 3px 5px;
+}
+
+#cardButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.disabled {
+    border-color: #8d8d8d !important;
+    background-color: #e4e4e4 !important;
+    color: rgb(129, 129, 129) !important;
+    box-shadow: none !important;
+}
+
+.cardButton {
+    border-radius: 10px;
+    border: 2px solid #007ced;
+    font-family: "Poppins", Helvetica, sans-serif;
+    padding: .6em 1.5em;
+    margin-bottom: .75em;
+    margin-right: .25em;
+    font-size: 1em;
+    line-height: 1.2;
+    border-radius: 30px;
+    text-shadow: none;
+    text-decoration: none;
+    z-index: 2; 
+}
+
+#urlLink {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    background-color: #007ced;
+    border-color: white;
+}
+
+#urlLink img {
+    width: 16px;
+    height: 16px;
+    margin: 4px;
+    filter: invert(100);
+    /* filter: invert(33%) sepia(51%) saturate(3155%) hue-rotate(192deg) brightness(96%) contrast(102%); */
+}
+
+@media only screen and (max-width: 600px) {
+    .cardContainer {
+        display: block;
+        width: 300px;
+        height: fit-content;
+        min-height: 320px;
+        text-align: center;
+    }
+
+    #githubLink {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    #showButton {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    #projectImage {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        margin: auto;
+    }
+
+    #urlLink {
+        bottom: -70px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #hoverContent img {
+        width: 360px;
+        height: 180px;
+    }
+}
+
+@keyframes cardShow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

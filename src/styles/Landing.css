@@ -1,0 +1,9 @@
+#landing {
+    margin: auto;
+    width: 100%;
+    max-width: 1320px;
+    height: fit-content;
+    min-height: 100%;
+    padding-bottom: 52px;
+    padding-top: 62px;
+}

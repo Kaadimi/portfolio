@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+  --accent-color: #0071EA;
+  --background-color: #ffffff;
+  --text-color: #666666;
+  --border-color: var(--accent-color);
+  --button-text-color: #000000;
+  --transition-delay: 1s;
+  --title-text-color: #333333;
+  --image-shadow: rgb(243, 243, 243);
+  --button-box-shadow: rgba(0,0,0,.22);
+  --filter: invert(0);
+
+  text-align: center;
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.75em;
+  text-align: center;
+  box-sizing: border-box;
+  transition: 1s;
+}
+
+body.dark {
+ --text-color: #d5d5d5;
+ --background-color: #222222;
+ --title-text-color: #f5f5f5;
+ --button-text-color: #ffffff;
+ --image-shadow: #444;
+ --button-box-shadow: rgba(255, 255, 255, 0.22);
+ --filter: invert(100)
+}
+
+#profileImg img {
+  box-shadow: 0 0 0 15px var(--image-shadow);
+}
+
+h1, h2 {
+  color: var(--title-text-color);
+}
+
+#root {
+  text-align: center;
+  margin: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.selected {
+  color: var(--title-text-color) !important;
+  border-bottom: 1px solid var(--title-text-color) !important;
+  filter: invert(0) !important;
+}
+
+.pageTitle {
+  text-align: left;
+  margin: auto 0px;
+  height: 70px;
+  background-color: var(--title-text-color);
+  /* background-color: rgb(252, 252, 252); */
+  border-bottom: 1px solid var(--image-shadow);
+}
+
+.cardContainer {
+  box-shadow: 0 10px 10px -8px var(--button-box-shadow);
+  background-color: var(--background-color);
+  border: 1px solid #e6e6e6;
+}
+
+#cardDescription, #cardLanguages {
+  color: var(--button-text-color);
+}
+
+#cardTitle {
+  color: var(--title-text-color);
+}
+
+button {
+  cursor: pointer;
+  color: var(--button-text-color);
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+  box-shadow: 0 10px 10px -8px var(--button-box-shadow);
+}
+
+#moreButton {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#moreButton img {
+  filter: var(--filter);
+}
+
+#navMenu {
+  background-color: var(--image-shadow);
+}
+
+input, textarea {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  cursor: pointer;
+  color: var(--button-text-color); 
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color) 
+}
+
+*:focus {
+  outline:none;
+}
+
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+h2:before {
+  position: absolute;
+  background: #007ced;
+  height: 2px;
+  content: '';
+  width: 50px;
+  bottom: -2px;
+  left: 0;
+}
