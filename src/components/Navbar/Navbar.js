@@ -3,10 +3,18 @@ import { NavLink, Link } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
-    const setTheme = () => {
-        document.body.classList.toggle('dark')
-        setLight(prevState => !prevState)
+    const setTheme = (light = false , start = false) => {
+        if (light === true && start === true) {
+            document.body.classList.toggle('dark')
+        }
+        else if (start === false) {
+            document.body.classList.toggle('dark')
+        }
+        setLight(light)
+        localStorage.setItem('portfolio_theme', light);
+       
     }
+
     const useWindowSize = () => {
         const [size, setSize] = useState([0, 0])
 
@@ -16,6 +24,7 @@ function Navbar() {
                     setNav(false)
                 setSize([window.innerWidth, window.innerHeight])
             }
+            setTheme(localStorage.getItem('portfolio_theme'), true)
             window.addEventListener('resize', updateSize)
             updateSize()
             return () => window.removeEventListener('resize', updateSize)
@@ -27,7 +36,7 @@ function Navbar() {
     const [nav, setNav] = useState(false)
     return (
         <div id="Navbar">
-             <button id="lightButton" onClick={() => setTheme()}>
+             <button id="lightButton" onClick={() => setTheme(!light)}>
                     {light ? <img alt="light button" src={process.env.PUBLIC_URL + '/lightbulb.png'}></img>
                     : <img alt="light button" src={process.env.PUBLIC_URL + '/blueLight.png'}></img>} 
              </button>
