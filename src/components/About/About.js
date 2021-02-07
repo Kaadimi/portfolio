@@ -18,7 +18,7 @@ function About() {
                        Intrested in web developement and working on ambitions projects.
                     </p>
                     <div id="aboutActions">
-                        <a href={process.env.PUBLIC_URL + 'ilias-kadimi.pdf'} download id="downloadCv">
+                        <a href={process.env.PUBLIC_URL + 'iliasKadimi.pdf'} download id="downloadCv">
                             Download CV
                         </a>
                         <Link to='/contact'>
